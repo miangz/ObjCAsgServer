@@ -1,0 +1,9 @@
+*.mode1v3
+*.pbxuser
+.DS_Store
+/build/
+/include/
+/openldap
+/openldap-*/
+/openldap-*.tgz
+/openldap-*.tgz.md5

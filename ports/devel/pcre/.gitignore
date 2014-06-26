@@ -1,0 +1,6 @@
+/build/
+/pcre
+/pcre-*/
+/pcre-*.tar.bz2
+/pcre-*.tar.bz2.md5
+/include/

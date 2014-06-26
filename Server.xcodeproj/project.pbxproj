@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB01135B1920A59200DFBF04 /* TCPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = EB01135A1920A59200DFBF04 /* TCPServer.m */; };
 		EB084DF81913990200A04E51 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB084DF71913990200A04E51 /* Cocoa.framework */; };
 		EB084E021913990200A04E51 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB084E001913990200A04E51 /* InfoPlist.strings */; };
 		EB084E041913990200A04E51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB084E031913990200A04E51 /* main.m */; };
@@ -18,6 +19,28 @@
 		EB084E181913990200A04E51 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB084DF71913990200A04E51 /* Cocoa.framework */; };
 		EB084E201913990200A04E51 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB084E1E1913990200A04E51 /* InfoPlist.strings */; };
 		EB084E221913990200A04E51 /* ServerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB084E211913990200A04E51 /* ServerTests.m */; };
+		EB2AC7A11948122200E98ADD /* NSMutableArray+MoveIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = EB2AC7A01948122200E98ADD /* NSMutableArray+MoveIndex.m */; };
+		EB4B65621918CF9A003C058A /* SKSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4B65591918CF9A003C058A /* SKSocket.m */; };
+		EB4B65631918CF9A003C058A /* SKSocketServer.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4B655B1918CF9A003C058A /* SKSocketServer.m */; };
+		EB4B65641918CF9A003C058A /* SKTCPSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4B655D1918CF9A003C058A /* SKTCPSocket.m */; };
+		EB4B65651918CF9A003C058A /* SKTCPSocketServer.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4B655F1918CF9A003C058A /* SKTCPSocketServer.m */; };
+		EB4B65661918CF9A003C058A /* SKTCPSSLSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4B65611918CF9A003C058A /* SKTCPSSLSocket.m */; };
+		EB4B65681918CFB5003C058A /* libcrypto.0.9.7.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB4B65671918CFB5003C058A /* libcrypto.0.9.7.dylib */; };
+		EB4B656A1918D382003C058A /* mycert.pem in Resources */ = {isa = PBXBuildFile; fileRef = EB4B65691918D382003C058A /* mycert.pem */; };
+		EB98940819139DBC008FA2DA /* ldapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EB98940719139DBC008FA2DA /* ldapTest.m */; };
+		EB98946F1913A4FE008FA2DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB084DFC1913990200A04E51 /* Foundation.framework */; };
+		EB9FA9361913AA280052DC60 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9FA9101913A9BF0052DC60 /* libcrypto.a */; };
+		EB9FA9371913AA280052DC60 /* libiOSPorts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9FA8FF1913A9B50052DC60 /* libiOSPorts.a */; };
+		EB9FA9381913AA280052DC60 /* liblber.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9FA8F81913A9AF0052DC60 /* liblber.a */; };
+		EB9FA9391913AA280052DC60 /* libldap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9FA8F61913A9AF0052DC60 /* libldap.a */; };
+		EB9FA93A1913AA280052DC60 /* libpcre.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9FA8EB1913A9A80052DC60 /* libpcre.a */; };
+		EB9FA93B1913AA280052DC60 /* libsasl2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9FA9061913A9BA0052DC60 /* libsasl2.a */; };
+		EB9FA93C1913AA280052DC60 /* libscryptcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9FA91D1913A9C30052DC60 /* libscryptcrypto.a */; };
+		EB9FA93D1913AA280052DC60 /* libscryptenc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9FA91B1913A9C30052DC60 /* libscryptenc.a */; };
+		EB9FA93E1913AA280052DC60 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9FA90E1913A9BF0052DC60 /* libssl.a */; };
+		EB9FA93F1913AA280052DC60 /* libutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9FA91F1913A9C30052DC60 /* libutil.a */; };
+		EBFDEB69191CE26C00F47457 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFDEB66191CE26C00F47457 /* NetworkManager.m */; };
+		EBFDEB6A191CE26C00F47457 /* QNetworkAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFDEB68191CE26C00F47457 /* QNetworkAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,9 +51,137 @@
 			remoteGlobalIDString = EB084DF31913990200A04E51;
 			remoteInfo = Server;
 		};
+		EB9FA8EA1913A9A80052DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB9FA8E51913A9A80052DC60 /* pcre.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = pcre;
+		};
+		EB9FA8F51913A9AF0052DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB9FA8EC1913A9AE0052DC60 /* openldap.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A03ADDBE11D14F1200F5A51F;
+			remoteInfo = ldap;
+		};
+		EB9FA8F71913A9AF0052DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB9FA8EC1913A9AE0052DC60 /* openldap.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A03ADE2A11D1520A00F5A51F;
+			remoteInfo = lber;
+		};
+		EB9FA8FE1913A9B50052DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB9FA8F91913A9B50052DC60 /* iOSPorts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = iOSPorts;
+		};
+		EB9FA9051913A9BA0052DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB9FA9001913A9BA0052DC60 /* Cyrus SASL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = sasl2;
+		};
+		EB9FA90D1913A9BF0052DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB9FA9071913A9BF0052DC60 /* openssl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = ssl;
+		};
+		EB9FA90F1913A9BF0052DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB9FA9071913A9BF0052DC60 /* openssl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A0511C5A127770FD00DE46C4;
+			remoteInfo = crypto;
+		};
+		EB9FA91A1913A9C30052DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB9FA9111913A9C30052DC60 /* scrypt.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = scryptenc;
+		};
+		EB9FA91C1913A9C30052DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB9FA9111913A9C30052DC60 /* scrypt.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A0511C5A127770FD00DE46C4;
+			remoteInfo = scryptcrypto;
+		};
+		EB9FA91E1913A9C30052DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB9FA9111913A9C30052DC60 /* scrypt.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DA67FE5D14E4834300DB7CC9;
+			remoteInfo = util;
+		};
+		EB9FA9201913A9D30052DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB9FA9111913A9C30052DC60 /* scrypt.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = scryptenc;
+		};
+		EB9FA9221913A9D30052DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB9FA9111913A9C30052DC60 /* scrypt.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A0511C51127770FD00DE46C4;
+			remoteInfo = scryptcrypto;
+		};
+		EB9FA9241913A9D30052DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB9FA9111913A9C30052DC60 /* scrypt.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DA67FE2814E4834300DB7CC9;
+			remoteInfo = util;
+		};
+		EB9FA9261913A9D60052DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB9FA9071913A9BF0052DC60 /* openssl.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = ssl;
+		};
+		EB9FA92A1913A9D90052DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB9FA9001913A9BA0052DC60 /* Cyrus SASL.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = sasl2;
+		};
+		EB9FA92C1913A9DC0052DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB9FA8F91913A9B50052DC60 /* iOSPorts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = iOSPorts;
+		};
+		EB9FA92E1913A9E00052DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB9FA8EC1913A9AE0052DC60 /* openldap.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A03ADDBD11D14F1200F5A51F;
+			remoteInfo = ldap;
+		};
+		EB9FA9321913A9E40052DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB9FA8E51913A9A80052DC60 /* pcre.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = pcre;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB0113591920A59200DFBF04 /* TCPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPServer.h; sourceTree = "<group>"; };
+		EB01135A1920A59200DFBF04 /* TCPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPServer.m; sourceTree = "<group>"; };
 		EB084DF41913990200A04E51 /* Server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Server.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB084DF71913990200A04E51 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EB084DFA1913990200A04E51 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -50,6 +201,32 @@
 		EB084E1D1913990200A04E51 /* ServerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ServerTests-Info.plist"; sourceTree = "<group>"; };
 		EB084E1F1913990200A04E51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EB084E211913990200A04E51 /* ServerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerTests.m; sourceTree = "<group>"; };
+		EB2AC79F1948122200E98ADD /* NSMutableArray+MoveIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+MoveIndex.h"; sourceTree = "<group>"; };
+		EB2AC7A01948122200E98ADD /* NSMutableArray+MoveIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+MoveIndex.m"; sourceTree = "<group>"; };
+		EB4B65581918CF9A003C058A /* SKSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSocket.h; sourceTree = "<group>"; };
+		EB4B65591918CF9A003C058A /* SKSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSocket.m; sourceTree = "<group>"; };
+		EB4B655A1918CF9A003C058A /* SKSocketServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSocketServer.h; sourceTree = "<group>"; };
+		EB4B655B1918CF9A003C058A /* SKSocketServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSocketServer.m; sourceTree = "<group>"; };
+		EB4B655C1918CF9A003C058A /* SKTCPSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTCPSocket.h; sourceTree = "<group>"; };
+		EB4B655D1918CF9A003C058A /* SKTCPSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTCPSocket.m; sourceTree = "<group>"; };
+		EB4B655E1918CF9A003C058A /* SKTCPSocketServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTCPSocketServer.h; sourceTree = "<group>"; };
+		EB4B655F1918CF9A003C058A /* SKTCPSocketServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTCPSocketServer.m; sourceTree = "<group>"; };
+		EB4B65601918CF9A003C058A /* SKTCPSSLSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTCPSSLSocket.h; sourceTree = "<group>"; };
+		EB4B65611918CF9A003C058A /* SKTCPSSLSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTCPSSLSocket.m; sourceTree = "<group>"; };
+		EB4B65671918CFB5003C058A /* libcrypto.0.9.7.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcrypto.0.9.7.dylib; sourceTree = "<group>"; };
+		EB4B65691918D382003C058A /* mycert.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mycert.pem; sourceTree = "<group>"; };
+		EB98940619139DBC008FA2DA /* ldapTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ldapTest.h; path = ../ldapTest.h; sourceTree = "<group>"; };
+		EB98940719139DBC008FA2DA /* ldapTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ldapTest.m; path = ../ldapTest.m; sourceTree = "<group>"; };
+		EB9FA8E51913A9A80052DC60 /* pcre.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = pcre.xcodeproj; path = ../iOSPorts/ports/devel/pcre/pcre.xcodeproj; sourceTree = "<group>"; };
+		EB9FA8EC1913A9AE0052DC60 /* openldap.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openldap.xcodeproj; path = ../iOSPorts/ports/database/openldap/openldap.xcodeproj; sourceTree = "<group>"; };
+		EB9FA8F91913A9B50052DC60 /* iOSPorts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iOSPorts.xcodeproj; path = ../iOSPorts/ports/iOSPorts/iOSPorts.xcodeproj; sourceTree = "<group>"; };
+		EB9FA9001913A9BA0052DC60 /* Cyrus SASL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Cyrus SASL.xcodeproj"; path = "../iOSPorts/ports/security/cyrus-sasl/Cyrus SASL.xcodeproj"; sourceTree = "<group>"; };
+		EB9FA9071913A9BF0052DC60 /* openssl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openssl.xcodeproj; path = ../iOSPorts/ports/security/openssl/openssl.xcodeproj; sourceTree = "<group>"; };
+		EB9FA9111913A9C30052DC60 /* scrypt.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = scrypt.xcodeproj; path = ../iOSPorts/ports/security/scrypt/scrypt.xcodeproj; sourceTree = "<group>"; };
+		EBFDEB65191CE26C00F47457 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		EBFDEB66191CE26C00F47457 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		EBFDEB67191CE26C00F47457 /* QNetworkAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNetworkAdditions.h; sourceTree = "<group>"; };
+		EBFDEB68191CE26C00F47457 /* QNetworkAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNetworkAdditions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +234,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB9FA9361913AA280052DC60 /* libcrypto.a in Frameworks */,
+				EB9FA9371913AA280052DC60 /* libiOSPorts.a in Frameworks */,
+				EB9FA9381913AA280052DC60 /* liblber.a in Frameworks */,
+				EB9FA9391913AA280052DC60 /* libldap.a in Frameworks */,
+				EB9FA93A1913AA280052DC60 /* libpcre.a in Frameworks */,
+				EB9FA93B1913AA280052DC60 /* libsasl2.a in Frameworks */,
+				EB9FA93C1913AA280052DC60 /* libscryptcrypto.a in Frameworks */,
+				EB9FA93D1913AA280052DC60 /* libscryptenc.a in Frameworks */,
+				EB9FA93E1913AA280052DC60 /* libssl.a in Frameworks */,
+				EB9FA93F1913AA280052DC60 /* libutil.a in Frameworks */,
+				EB4B65681918CFB5003C058A /* libcrypto.0.9.7.dylib in Frameworks */,
+				EB98946F1913A4FE008FA2DA /* Foundation.framework in Frameworks */,
 				EB084DF81913990200A04E51 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +269,12 @@
 				EB084E1B1913990200A04E51 /* ServerTests */,
 				EB084DF61913990200A04E51 /* Frameworks */,
 				EB084DF51913990200A04E51 /* Products */,
+				EB9FA9111913A9C30052DC60 /* scrypt.xcodeproj */,
+				EB9FA9071913A9BF0052DC60 /* openssl.xcodeproj */,
+				EB9FA9001913A9BA0052DC60 /* Cyrus SASL.xcodeproj */,
+				EB9FA8F91913A9B50052DC60 /* iOSPorts.xcodeproj */,
+				EB9FA8EC1913A9AE0052DC60 /* openldap.xcodeproj */,
+				EB9FA8E51913A9A80052DC60 /* pcre.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +312,11 @@
 			children = (
 				EB084E091913990200A04E51 /* AppDelegate.h */,
 				EB084E0A1913990200A04E51 /* AppDelegate.m */,
+				EB084E031913990200A04E51 /* main.m */,
+				EB98940619139DBC008FA2DA /* ldapTest.h */,
+				EB98940719139DBC008FA2DA /* ldapTest.m */,
+				EB0113591920A59200DFBF04 /* TCPServer.h */,
+				EB01135A1920A59200DFBF04 /* TCPServer.m */,
 				EB084E0C1913990200A04E51 /* MainMenu.xib */,
 				EB084E0F1913990200A04E51 /* Images.xcassets */,
 				EB084DFE1913990200A04E51 /* Supporting Files */,
@@ -127,9 +327,15 @@
 		EB084DFE1913990200A04E51 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EB2AC79F1948122200E98ADD /* NSMutableArray+MoveIndex.h */,
+				EB2AC7A01948122200E98ADD /* NSMutableArray+MoveIndex.m */,
+				EBFDEB65191CE26C00F47457 /* NetworkManager.h */,
+				EBFDEB66191CE26C00F47457 /* NetworkManager.m */,
+				EBFDEB67191CE26C00F47457 /* QNetworkAdditions.h */,
+				EBFDEB68191CE26C00F47457 /* QNetworkAdditions.m */,
+				EB4B654E1918CF85003C058A /* SocketKit */,
 				EB084DFF1913990200A04E51 /* Server-Info.plist */,
 				EB084E001913990200A04E51 /* InfoPlist.strings */,
-				EB084E031913990200A04E51 /* main.m */,
 				EB084E051913990200A04E51 /* Server-Prefix.pch */,
 				EB084E061913990200A04E51 /* Credits.rtf */,
 			);
@@ -154,6 +360,77 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EB4B654E1918CF85003C058A /* SocketKit */ = {
+			isa = PBXGroup;
+			children = (
+				EB4B65691918D382003C058A /* mycert.pem */,
+				EB4B65671918CFB5003C058A /* libcrypto.0.9.7.dylib */,
+				EB4B65581918CF9A003C058A /* SKSocket.h */,
+				EB4B65591918CF9A003C058A /* SKSocket.m */,
+				EB4B655A1918CF9A003C058A /* SKSocketServer.h */,
+				EB4B655B1918CF9A003C058A /* SKSocketServer.m */,
+				EB4B655C1918CF9A003C058A /* SKTCPSocket.h */,
+				EB4B655D1918CF9A003C058A /* SKTCPSocket.m */,
+				EB4B655E1918CF9A003C058A /* SKTCPSocketServer.h */,
+				EB4B655F1918CF9A003C058A /* SKTCPSocketServer.m */,
+				EB4B65601918CF9A003C058A /* SKTCPSSLSocket.h */,
+				EB4B65611918CF9A003C058A /* SKTCPSSLSocket.m */,
+			);
+			name = SocketKit;
+			sourceTree = "<group>";
+		};
+		EB9FA8E61913A9A80052DC60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB9FA8EB1913A9A80052DC60 /* libpcre.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB9FA8ED1913A9AE0052DC60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB9FA8F61913A9AF0052DC60 /* libldap.a */,
+				EB9FA8F81913A9AF0052DC60 /* liblber.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB9FA8FA1913A9B50052DC60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB9FA8FF1913A9B50052DC60 /* libiOSPorts.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB9FA9011913A9BA0052DC60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB9FA9061913A9BA0052DC60 /* libsasl2.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB9FA9081913A9BF0052DC60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB9FA90E1913A9BF0052DC60 /* libssl.a */,
+				EB9FA9101913A9BF0052DC60 /* libcrypto.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB9FA9121913A9C30052DC60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB9FA91B1913A9C30052DC60 /* libscryptenc.a */,
+				EB9FA91D1913A9C30052DC60 /* libscryptcrypto.a */,
+				EB9FA91F1913A9C30052DC60 /* libutil.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,6 +445,14 @@
 			buildRules = (
 			);
 			dependencies = (
+				EB9FA9331913A9E40052DC60 /* PBXTargetDependency */,
+				EB9FA92F1913A9E00052DC60 /* PBXTargetDependency */,
+				EB9FA92D1913A9DC0052DC60 /* PBXTargetDependency */,
+				EB9FA92B1913A9D90052DC60 /* PBXTargetDependency */,
+				EB9FA9271913A9D60052DC60 /* PBXTargetDependency */,
+				EB9FA9211913A9D30052DC60 /* PBXTargetDependency */,
+				EB9FA9231913A9D30052DC60 /* PBXTargetDependency */,
+				EB9FA9251913A9D30052DC60 /* PBXTargetDependency */,
 			);
 			name = Server;
 			productName = Server;
@@ -217,6 +502,32 @@
 			mainGroup = EB084DEB1913990200A04E51;
 			productRefGroup = EB084DF51913990200A04E51 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EB9FA9011913A9BA0052DC60 /* Products */;
+					ProjectRef = EB9FA9001913A9BA0052DC60 /* Cyrus SASL.xcodeproj */;
+				},
+				{
+					ProductGroup = EB9FA8FA1913A9B50052DC60 /* Products */;
+					ProjectRef = EB9FA8F91913A9B50052DC60 /* iOSPorts.xcodeproj */;
+				},
+				{
+					ProductGroup = EB9FA8ED1913A9AE0052DC60 /* Products */;
+					ProjectRef = EB9FA8EC1913A9AE0052DC60 /* openldap.xcodeproj */;
+				},
+				{
+					ProductGroup = EB9FA9081913A9BF0052DC60 /* Products */;
+					ProjectRef = EB9FA9071913A9BF0052DC60 /* openssl.xcodeproj */;
+				},
+				{
+					ProductGroup = EB9FA8E61913A9A80052DC60 /* Products */;
+					ProjectRef = EB9FA8E51913A9A80052DC60 /* pcre.xcodeproj */;
+				},
+				{
+					ProductGroup = EB9FA9121913A9C30052DC60 /* Products */;
+					ProjectRef = EB9FA9111913A9C30052DC60 /* scrypt.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				EB084DF31913990200A04E51 /* Server */,
@@ -224,6 +535,79 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EB9FA8EB1913A9A80052DC60 /* libpcre.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libpcre.a;
+			remoteRef = EB9FA8EA1913A9A80052DC60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EB9FA8F61913A9AF0052DC60 /* libldap.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libldap.a;
+			remoteRef = EB9FA8F51913A9AF0052DC60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EB9FA8F81913A9AF0052DC60 /* liblber.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liblber.a;
+			remoteRef = EB9FA8F71913A9AF0052DC60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EB9FA8FF1913A9B50052DC60 /* libiOSPorts.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libiOSPorts.a;
+			remoteRef = EB9FA8FE1913A9B50052DC60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EB9FA9061913A9BA0052DC60 /* libsasl2.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libsasl2.a;
+			remoteRef = EB9FA9051913A9BA0052DC60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EB9FA90E1913A9BF0052DC60 /* libssl.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libssl.a;
+			remoteRef = EB9FA90D1913A9BF0052DC60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EB9FA9101913A9BF0052DC60 /* libcrypto.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcrypto.a;
+			remoteRef = EB9FA90F1913A9BF0052DC60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EB9FA91B1913A9C30052DC60 /* libscryptenc.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libscryptenc.a;
+			remoteRef = EB9FA91A1913A9C30052DC60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EB9FA91D1913A9C30052DC60 /* libscryptcrypto.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libscryptcrypto.a;
+			remoteRef = EB9FA91C1913A9C30052DC60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EB9FA91F1913A9C30052DC60 /* libutil.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libutil.a;
+			remoteRef = EB9FA91E1913A9C30052DC60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EB084DF21913990200A04E51 /* Resources */ = {
@@ -234,6 +618,7 @@
 				EB084E101913990200A04E51 /* Images.xcassets in Resources */,
 				EB084E081913990200A04E51 /* Credits.rtf in Resources */,
 				EB084E0E1913990200A04E51 /* MainMenu.xib in Resources */,
+				EB4B656A1918D382003C058A /* mycert.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,8 +637,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB2AC7A11948122200E98ADD /* NSMutableArray+MoveIndex.m in Sources */,
+				EB4B65641918CF9A003C058A /* SKTCPSocket.m in Sources */,
+				EB4B65621918CF9A003C058A /* SKSocket.m in Sources */,
+				EB4B65651918CF9A003C058A /* SKTCPSocketServer.m in Sources */,
+				EBFDEB69191CE26C00F47457 /* NetworkManager.m in Sources */,
+				EB4B65661918CF9A003C058A /* SKTCPSSLSocket.m in Sources */,
 				EB084E0B1913990200A04E51 /* AppDelegate.m in Sources */,
+				EB98940819139DBC008FA2DA /* ldapTest.m in Sources */,
+				EB01135B1920A59200DFBF04 /* TCPServer.m in Sources */,
 				EB084E041913990200A04E51 /* main.m in Sources */,
+				EBFDEB6A191CE26C00F47457 /* QNetworkAdditions.m in Sources */,
+				EB4B65631918CF9A003C058A /* SKSocketServer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +667,46 @@
 			isa = PBXTargetDependency;
 			target = EB084DF31913990200A04E51 /* Server */;
 			targetProxy = EB084E191913990200A04E51 /* PBXContainerItemProxy */;
+		};
+		EB9FA9211913A9D30052DC60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = scryptenc;
+			targetProxy = EB9FA9201913A9D30052DC60 /* PBXContainerItemProxy */;
+		};
+		EB9FA9231913A9D30052DC60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = scryptcrypto;
+			targetProxy = EB9FA9221913A9D30052DC60 /* PBXContainerItemProxy */;
+		};
+		EB9FA9251913A9D30052DC60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = util;
+			targetProxy = EB9FA9241913A9D30052DC60 /* PBXContainerItemProxy */;
+		};
+		EB9FA9271913A9D60052DC60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ssl;
+			targetProxy = EB9FA9261913A9D60052DC60 /* PBXContainerItemProxy */;
+		};
+		EB9FA92B1913A9D90052DC60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = sasl2;
+			targetProxy = EB9FA92A1913A9D90052DC60 /* PBXContainerItemProxy */;
+		};
+		EB9FA92D1913A9DC0052DC60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iOSPorts;
+			targetProxy = EB9FA92C1913A9DC0052DC60 /* PBXContainerItemProxy */;
+		};
+		EB9FA92F1913A9E00052DC60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ldap;
+			targetProxy = EB9FA92E1913A9E00052DC60 /* PBXContainerItemProxy */;
+		};
+		EB9FA9331913A9E40052DC60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = pcre;
+			targetProxy = EB9FA9321913A9E40052DC60 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -314,7 +749,7 @@
 		EB084E231913990200A04E51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -346,13 +781,14 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = ../iOSPorts/include;
 			};
 			name = Debug;
 		};
 		EB084E241913990200A04E51 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -378,6 +814,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = ../iOSPorts/include;
 			};
 			name = Release;
 		};
@@ -389,7 +826,16 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Server/Server-Prefix.pch";
 				INFOPLIST_FILE = "Server/Server-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Server",
+				);
+				OTHER_LDFLAGS = (
+					"-lssl",
+					"-lcrypto",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = ../iOSports/include;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -402,7 +848,16 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Server/Server-Prefix.pch";
 				INFOPLIST_FILE = "Server/Server-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Server",
+				);
+				OTHER_LDFLAGS = (
+					"-lssl",
+					"-lcrypto",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = ../iOSports/include;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -466,6 +921,7 @@
 				EB084E271913990200A04E51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB084E281913990200A04E51 /* Build configuration list for PBXNativeTarget "ServerTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +930,7 @@
 				EB084E2A1913990200A04E51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

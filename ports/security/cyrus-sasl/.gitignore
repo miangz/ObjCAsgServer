@@ -1,0 +1,6 @@
+/build/
+/cyrus-sasl
+/cyrus-sasl-*/
+/cyrus-sasl-*.tar.gz
+/cyrus-sasl-*.tar.gz.md5
+/include/
