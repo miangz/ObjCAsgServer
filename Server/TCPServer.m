@@ -716,7 +716,8 @@ static void AcceptCallback(CFSocketRef s, CFSocketCallBackType type, CFDataRef a
     char *j = [l getStockList: char_uid];
     
     //a+b+c+d\te+f+g
-    NSMutableString *result = [NSMutableString stringWithCString:j encoding:NSUTF8StringEncoding];
+    NSMutableString *result = [[NSMutableString alloc]initWithString:[NSString stringWithUTF8String:j]];
+    //[NSMutableString stringWithCString:j encoding:NSUTF8StringEncoding];
     
     NSMutableArray *countArr = [[NSMutableArray alloc]initWithArray:[result componentsSeparatedByString:@"\t" ]];
     
@@ -727,10 +728,12 @@ static void AcceptCallback(CFSocketRef s, CFSocketCallBackType type, CFDataRef a
             [result appendString:@"\tdefault"];
         }
         NSLog(@"countArr : %lu , stockNO : %d",(unsigned long)countArr.count,stockNO);
-        const char *const_stock=[result UTF8String];
-        char *char_stock = calloc([result length]+1, 1);
-        strncpy(char_stock, const_stock, [result length]);
+//        const char *const_stock=[result UTF8String];
+//        char *char_stock = calloc([result length]+1, 1);
+//        strncpy(char_stock, const_stock, [result length]);
+        char char_stock[] = "default";
         int resultMod = [l modify:char_stock withUID:char_uid];
+        
     }
     
     NSMutableArray *myStockList = [[NSMutableArray alloc]init];
@@ -751,7 +754,7 @@ static void AcceptCallback(CFSocketRef s, CFSocketCallBackType type, CFDataRef a
         }
         
     }
-    NSNumber *totalList = [NSNumber numberWithLong:countArr.count];
+    NSNumber *totalList = [NSNumber numberWithInteger:countArr.count];
     NSMutableString *header = [[NSMutableString alloc]initWithString:@"getStockInfoOfUid:"];
     [header appendString:[NSString stringWithFormat:@"%d",stockNO]];
     
