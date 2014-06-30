@@ -418,7 +418,6 @@ void do_other_work()
                     printf( "%s[%d]: %s \n", a,i, vals[i] );
                     NSString *result = [NSString stringWithCString:a encoding:NSUTF8StringEncoding];
                     if ([result isEqualToString:@"stockName"]) {
-                        NSLog(@"getStockList stockName : %s",vals[i]);
 //                        return vals[i];
                         if (strlen(stockName) < 1) {
                             strcpy(stockName,vals[i]);
@@ -438,6 +437,9 @@ void do_other_work()
             
         }
         
+        if (strlen(stockName)>0) {
+            return stockName;
+        }
         if ( ber != NULL ) {
             
             ber_free( ber, 0 );
@@ -460,6 +462,7 @@ void do_other_work()
     ldap_msgfree( result );
     
     ldap_unbind( ld );
+    
     
     NSLog(@"A3");
     return "0";
@@ -587,7 +590,7 @@ void do_other_work()
     NSLog(@"A3");
     return "0";
 }
-
+//create an account
 -(int)addASyncWithCN:(char*)cname SN:(char*)sname uid:(char*)uid andPass:(char*)pass{
     
     if (cname == nil || sname == nil || pass == nil) {
@@ -621,7 +624,7 @@ void do_other_work()
     
     char *userPassword[] = { pass, NULL };
     
-    char *des_vals[] = {"default",NULL};
+    char *des_vals[] = {"1",NULL};
     
     zerotime.tv_sec = zerotime.tv_usec = 0L;
     
@@ -790,16 +793,6 @@ void do_other_work()
                 
             case 0:
                 
-                /* The timeout period specified by zerotime was exceeded.
-                 
-                 This means that the server has still not yet sent the
-                 
-                 results of the add operation back to your client.
-                 
-                 Break out of this switch statement, and continue calling
-                 
-                 ldap_result() to poll for results. */
-                
                 break;
                 
             default:
@@ -809,14 +802,6 @@ void do_other_work()
                  from the server. */
                 
                 finished = 1;
-                
-                /* Parse the results received from the server. Note the last
-                 
-                 argument is a non-zero value, which indicates that the
-                 
-                 LDAPMessage structure will be freed when done. (No need
-                 
-                 to call ldap_msgfree().) */
                 
                 parse_rc = ldap_parse_result( ld, res, &rc, &matched_msg, &error_msg, &referrals, &serverctrls, 1 );
                 
@@ -1171,8 +1156,60 @@ void do_other_work()
     
     return 0;
 }
+char** str_split(char* a_str, const char a_delim)
+{
+    char** result    = 0;
+    size_t count     = 0;
+    char* tmp        = a_str;
+    char* last_comma = 0;
+    char delim[2];
+    delim[0] = a_delim;
+    delim[1] = 0;
+    
+    /* Count how many elements will be extracted. */
+    while (*tmp)
+    {
+        if (a_delim == *tmp)
+        {
+            count++;
+            last_comma = tmp;
+        }
+        tmp++;
+    }
+    
+    /* Add space for trailing token. */
+    count += last_comma < (a_str + strlen(a_str) - 1);
+    
+    /* Add space for terminating null string so caller
+     knows where the list of returned strings ends. */
+    count++;
+    
+    result = malloc(sizeof(char*) * count+1);
+    
+    if (result)
+    {
+        size_t idx  = 0;
+        char* token = strtok(a_str, delim);
+        
+        while (token)
+        {
+            assert(idx < count);
+            *(result + idx++) = strdup(token);
+            token = strtok(0, delim);
+        }
+        assert(idx == count - 1);
+        *(result + idx) = 0;
+    }
+    
+    *(result + count) = NULL;
+    
+    return result;
+}
 
 -(int) modify:(char *)stock withUID:(char *)uid{
+    
+    char** tokens;
+    tokens = str_split(stock, '\t');
     
     LDAP *ld;
     
@@ -1192,7 +1229,7 @@ void do_other_work()
     
     struct timeval zerotime;
     
-    char *des_vals[] = {stock,NULL};
+    char **des_vals = tokens;//{stock,NULL};
     
     zerotime.tv_sec = zerotime.tv_usec = 0L;
     
@@ -1274,7 +1311,7 @@ void do_other_work()
         
     }
     
-    mods[ 0 ]->mod_op = LDAP_MOD_ADD;
+    mods[ 0 ]->mod_op = LDAP_MOD_REPLACE;
     
     mods[ 0 ]->mod_type = "stockName";
     

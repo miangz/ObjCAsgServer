@@ -648,7 +648,7 @@ static void AcceptCallback(CFSocketRef s, CFSocketCallBackType type, CFDataRef a
             if(range.location != NSNotFound)
             {
                 range = NSMakeRange(range.location + range.length, length - (range.location + range.length));
-                if (count == stockNO) {
+                if (count == stockNO) { 
                     
                     [result insertString:stock atIndex:(int)range.location-1];
                     [result insertString:@"+" atIndex:(int)range.location-1];
@@ -669,7 +669,11 @@ static void AcceptCallback(CFSocketRef s, CFSocketCallBackType type, CFDataRef a
             [result appendString:@"\t"];
             count++;
         }
-        if (range.location == NSNotFound) {
+        
+        if (count == 0 && stockNO == 0) {
+            [result appendString:@"+"];
+            [result appendString:stock];
+        }else if (range.location == NSNotFound) {
                 [result appendString:@"+"];
                 [result appendString:stock];
         }
@@ -722,21 +726,26 @@ static void AcceptCallback(CFSocketRef s, CFSocketCallBackType type, CFDataRef a
     NSMutableArray *countArr = [[NSMutableArray alloc]initWithArray:[result componentsSeparatedByString:@"\t" ]];
     
     
-    if (stockNO > countArr.count -1) {
-        for (int j = (int)countArr.count-1; j < stockNO; j++) {
-            [countArr addObject:@"default"];
-            [result appendString:@"\tdefault"];
+    if (stockNO >= countArr.count) {
+        for (int j = (int)countArr.count; j <= stockNO; j++) {
+            [countArr addObject:[NSString stringWithFormat:@"%d",j+1]];
+            [result appendString:[NSString stringWithFormat:@"\t%d",j+1]];
         }
         NSLog(@"countArr : %lu , stockNO : %d",(unsigned long)countArr.count,stockNO);
 //        const char *const_stock=[result UTF8String];
 //        char *char_stock = calloc([result length]+1, 1);
 //        strncpy(char_stock, const_stock, [result length]);
-        char char_stock[] = "default";
+        NSString *ss =[NSString stringWithFormat:@"%@",result];
+        
+        const char *const_stock=[ss UTF8String];
+        char *char_stock = calloc([ss length]+1, 1);
+        strncpy(char_stock, const_stock, [ss length]);
         int resultMod = [l modify:char_stock withUID:char_uid];
         
     }
     
     NSMutableArray *myStockList = [[NSMutableArray alloc]init];
+    [countArr sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     NSArray *nameList = [[countArr objectAtIndex:stockNO ] componentsSeparatedByString:@"+"];
     
     NSLog(@"nameList : %@",nameList);
@@ -792,6 +801,8 @@ static void AcceptCallback(CFSocketRef s, CFSocketCallBackType type, CFDataRef a
         //found uid
         NSLog(@"found");
         NSMutableArray *totalStockArr = [[NSMutableArray alloc]initWithArray:[result componentsSeparatedByString:@"\t"]];
+        [totalStockArr sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+        
         NSMutableArray *targetStockArr = [[NSMutableArray alloc]initWithArray:[[totalStockArr objectAtIndex:stockNO]componentsSeparatedByString:@"+"]];
         for (int n = 0; n<removeStockArr.count; n++) {
             [targetStockArr removeObject:[[removeStockArr objectAtIndex:n]lowercaseString]];
@@ -839,6 +850,8 @@ static void AcceptCallback(CFSocketRef s, CFSocketCallBackType type, CFDataRef a
         NSLog(@"***********************************");
         NSLog(@"result : %@",result);
         NSMutableArray *totalStockArr = [[NSMutableArray alloc]initWithArray:[result componentsSeparatedByString:@"\t"]];
+        [totalStockArr sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+        
         NSMutableArray *targetStockArr = [[NSMutableArray alloc]initWithArray:[[totalStockArr objectAtIndex:stockNO]componentsSeparatedByString:@"+"]];
         
         NSString *name = [targetStockArr objectAtIndex:sourceIndex];
@@ -909,7 +922,7 @@ static void AcceptCallback(CFSocketRef s, CFSocketCallBackType type, CFDataRef a
     //a+b+c+d\te+f+g
     NSMutableString *result = [NSMutableString stringWithCString:j encoding:NSUTF8StringEncoding];
     NSMutableArray *totalList = [[NSMutableArray alloc]initWithArray:[result componentsSeparatedByString:@"\t" ]];
-    
+    [totalList sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     NSLog(@"totalList : %@",totalList);
     
     NSMutableArray *myStockList = [[NSMutableArray alloc]init];
@@ -944,10 +957,22 @@ static void AcceptCallback(CFSocketRef s, CFSocketCallBackType type, CFDataRef a
         //found uid
         NSLog(@"found");
         NSMutableArray *totalStockArr = [[NSMutableArray alloc]initWithArray:[result componentsSeparatedByString:@"\t"]];
+        [totalStockArr sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
         
         for (int n = 0; n<removeStockArr.count; n++) {
             [totalStockArr removeObjectAtIndex:[[removeStockArr objectAtIndex:n] intValue]];
+            for (int k = [[removeStockArr objectAtIndex:n] intValue] ; k <totalStockArr.count; k++) {
+                NSString *name = [totalStockArr objectAtIndex:k];
+                NSString *source = [NSString stringWithFormat:@"%d",k+2];
+                NSString *des = [NSString stringWithFormat:@"%d",k+1];
+                
+                name = [name stringByReplacingOccurrencesOfString:source
+                                                withString:des];
+                [totalStockArr replaceObjectAtIndex:k withObject:name];
+            }
         }
+        
+        
         NSString *targetStock = [totalStockArr componentsJoinedByString:@"\t"];
         NSLog(@"targetStock : %@",targetStock);
         
@@ -984,11 +1009,26 @@ static void AcceptCallback(CFSocketRef s, CFSocketCallBackType type, CFDataRef a
         //found uid
         NSLog(@"found");
         NSMutableArray *totalStockArr = [[NSMutableArray alloc]initWithArray:[result componentsSeparatedByString:@"\t"]];
+        [totalStockArr sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
         
         NSString *name = [totalStockArr objectAtIndex:sourceIndex];
+        NSString *source = [NSString stringWithFormat:@"%d",sourceIndex];
+        NSString *des = [NSString stringWithFormat:@"%d",destinationIndex];
+        
+        [name stringByReplacingOccurrencesOfString:source
+                                       withString:des];
         [totalStockArr removeObjectAtIndex:sourceIndex];
         [totalStockArr insertObject:name atIndex:destinationIndex];
         
+        for (int n = destinationIndex + 1; n <totalStockArr.count; n++) {
+            NSString *name = [totalStockArr objectAtIndex:n];
+            NSString *source = [NSString stringWithFormat:@"%d",n];
+            NSString *des = [NSString stringWithFormat:@"%d",n+1];
+            
+            [name stringByReplacingOccurrencesOfString:source
+                                            withString:des];
+            [totalStockArr replaceObjectAtIndex:n withObject:name];
+        }
         NSString *targetStock = [totalStockArr componentsJoinedByString:@"\t"];
         
         
