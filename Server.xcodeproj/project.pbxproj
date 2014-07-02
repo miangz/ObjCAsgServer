@@ -27,6 +27,8 @@
 		EB4B65661918CF9A003C058A /* SKTCPSSLSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4B65611918CF9A003C058A /* SKTCPSSLSocket.m */; };
 		EB4B65681918CFB5003C058A /* libcrypto.0.9.7.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB4B65671918CFB5003C058A /* libcrypto.0.9.7.dylib */; };
 		EB4B656A1918D382003C058A /* mycert.pem in Resources */ = {isa = PBXBuildFile; fileRef = EB4B65691918D382003C058A /* mycert.pem */; };
+		EB90DC941963D153005ED068 /* LdapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB90DC931963D153005ED068 /* LdapManager.m */; };
+		EB90DCA01963D2F9005ED068 /* UpdatingStock.m in Sources */ = {isa = PBXBuildFile; fileRef = EB90DC9F1963D2F9005ED068 /* UpdatingStock.m */; };
 		EB98940819139DBC008FA2DA /* ldapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EB98940719139DBC008FA2DA /* ldapTest.m */; };
 		EB98946F1913A4FE008FA2DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB084DFC1913990200A04E51 /* Foundation.framework */; };
 		EB9FA9361913AA280052DC60 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9FA9101913A9BF0052DC60 /* libcrypto.a */; };
@@ -215,6 +217,10 @@
 		EB4B65611918CF9A003C058A /* SKTCPSSLSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTCPSSLSocket.m; sourceTree = "<group>"; };
 		EB4B65671918CFB5003C058A /* libcrypto.0.9.7.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcrypto.0.9.7.dylib; sourceTree = "<group>"; };
 		EB4B65691918D382003C058A /* mycert.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mycert.pem; sourceTree = "<group>"; };
+		EB90DC921963D153005ED068 /* LdapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LdapManager.h; sourceTree = "<group>"; };
+		EB90DC931963D153005ED068 /* LdapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LdapManager.m; sourceTree = "<group>"; };
+		EB90DC9E1963D2F9005ED068 /* UpdatingStock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdatingStock.h; sourceTree = "<group>"; };
+		EB90DC9F1963D2F9005ED068 /* UpdatingStock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdatingStock.m; sourceTree = "<group>"; };
 		EB98940619139DBC008FA2DA /* ldapTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ldapTest.h; path = ../ldapTest.h; sourceTree = "<group>"; };
 		EB98940719139DBC008FA2DA /* ldapTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ldapTest.m; path = ../ldapTest.m; sourceTree = "<group>"; };
 		EB9FA8E51913A9A80052DC60 /* pcre.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = pcre.xcodeproj; path = ../iOSPorts/ports/devel/pcre/pcre.xcodeproj; sourceTree = "<group>"; };
@@ -317,6 +323,10 @@
 				EB98940719139DBC008FA2DA /* ldapTest.m */,
 				EB0113591920A59200DFBF04 /* TCPServer.h */,
 				EB01135A1920A59200DFBF04 /* TCPServer.m */,
+				EB90DC9E1963D2F9005ED068 /* UpdatingStock.h */,
+				EB90DC9F1963D2F9005ED068 /* UpdatingStock.m */,
+				EB90DC921963D153005ED068 /* LdapManager.h */,
+				EB90DC931963D153005ED068 /* LdapManager.m */,
 				EB084E0C1913990200A04E51 /* MainMenu.xib */,
 				EB084E0F1913990200A04E51 /* Images.xcassets */,
 				EB084DFE1913990200A04E51 /* Supporting Files */,
@@ -642,6 +652,8 @@
 				EB4B65621918CF9A003C058A /* SKSocket.m in Sources */,
 				EB4B65651918CF9A003C058A /* SKTCPSocketServer.m in Sources */,
 				EBFDEB69191CE26C00F47457 /* NetworkManager.m in Sources */,
+				EB90DC941963D153005ED068 /* LdapManager.m in Sources */,
+				EB90DCA01963D2F9005ED068 /* UpdatingStock.m in Sources */,
 				EB4B65661918CF9A003C058A /* SKTCPSSLSocket.m in Sources */,
 				EB084E0B1913990200A04E51 /* AppDelegate.m in Sources */,
 				EB98940819139DBC008FA2DA /* ldapTest.m in Sources */,

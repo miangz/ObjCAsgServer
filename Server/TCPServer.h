@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "NSMutableArray+MoveIndex.h"
-
+#import "UpdatingStock.h"
+#import "LdapManager.h"
 
 @interface TCPServer : NSObject <NSStreamDelegate, NSNetServiceDelegate>
 
@@ -23,7 +24,9 @@
 @property (nonatomic, assign, readwrite) size_t             bufferOffset;
 @property (nonatomic, assign, readwrite) size_t             bufferLimit;
 
++ (id)sharedManager;
 - (void)startUpdateStock;
-- (void) startServer;
+- (void)startServer;
 - (void)sendMessage:(NSString *)string;
+- (void)sendData:(NSData *)data;
 @end

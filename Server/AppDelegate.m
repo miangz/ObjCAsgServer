@@ -18,7 +18,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    server = [[TCPServer alloc]init];
+    server = [TCPServer sharedManager];
     [server startServer];
     [server startUpdateStock];
 //    myServer = [[Server alloc]init];
